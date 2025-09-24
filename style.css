@@ -1320,14 +1320,7 @@ html {
   color: #f9f9f9;
 }
 
-.form-container ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #4CAF50;
-  font-weight: bold;
-}
+
 /* Service card icon/logo */
 .service-icon {
   position: absolute;   

@@ -11,33 +11,37 @@ document.addEventListener("DOMContentLoaded", () => {
     // Champs simples
     // ------------------------------
     formData.append("entry.1349760617", form.fullName.value); // Nom et prénom
-    formData.append("entry.741531472", form.age.value); // Âge
-    formData.append("entry.801851716", form.city.value); // Ville
-    formData.append("entry.133123274", form.email.value); // Email
-    formData.append("entry.722510533", form.phone.value); // Téléphone
+    formData.append("entry.741531472", form.age.value);       // Âge
+    formData.append("entry.801851716", form.city.value);      // Ville
+    formData.append("entry.133123274", form.email.value);     // Email
+    formData.append("entry.722510533", form.phone.value);     // Téléphone
 
     // ------------------------------
     // Fonction utilitaire pour checkboxes avec "Autre"
     // ------------------------------
     function handleCheckboxGroup(fieldName, entryId) {
       const checkboxes = form.querySelectorAll(`input[name="${fieldName}"]:checked`);
-      let answers = [];
+      const otherInput = form.querySelector(`input[name="${fieldName}Other"]`);
 
       checkboxes.forEach((cb) => {
-        if (cb.value === "Autre…" || cb.value === "Autre (précisez)" || cb.value === "Other…") {
-          const otherInput = form.querySelector(`input[name="${fieldName}Other"]`);
+        if (cb.value.includes("Autre")) {
+          // Ajouter le flag __other_option__
+          formData.append(entryId, "__other_option__");
+
+          // Ajouter la valeur du champ texte lié
           if (otherInput && otherInput.value.trim() !== "") {
-            answers.push(otherInput.value.trim());
-          } else {
-            answers.push("Autre");
+            formData.append(`${entryId}.other_option_response`, otherInput.value.trim());
           }
         } else {
-          answers.push(cb.value);
+          // Ajouter le choix normal
+          formData.append(entryId, cb.value);
         }
       });
 
-      if (answers.length > 0) {
-        formData.append(entryId, answers.join(", "));
+      // Cas : si rien de coché mais champ texte rempli → quand même envoyer
+      if (checkboxes.length === 0 && otherInput && otherInput.value.trim() !== "") {
+        formData.append(entryId, "__other_option__");
+        formData.append(`${entryId}.other_option_response`, otherInput.value.trim());
       }
     }
 

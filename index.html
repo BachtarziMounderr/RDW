@@ -406,10 +406,7 @@
                             />
                         </div>
                     </div>
-
-
-
-<!-- Destination en Allemagne -->
+                    <!-- Destination en Allemagne -->
 <div class="form-group">
   <label class="form-label">Quelle est votre Destination en Allemagne</label>
   <div class="checkbox-group" data-require="true">
@@ -418,7 +415,7 @@
       <span>Je suis flexible et prêt(e) à m’installer dans le Land offrant les meilleures opportunités et garanties de réussite</span>
     </label>
     <label class="checkbox-option">
-      <input type="checkbox" name="destination" value="Un Land précis (précisez lequel)">
+      <input type="checkbox" name="destination" value="Autre…">
       <span>Un Land précis (précisez lequel)</span>
     </label>
   </div>
@@ -434,6 +431,10 @@
     <label class="checkbox-option"><input type="checkbox" name="professionalSituation" value="Indépendant(e) Domaine d’activité"><span>Indépendant(e) Domaine d’activité</span></label>
     <label class="checkbox-option"><input type="checkbox" name="professionalSituation" value="Formation professionnelle"><span>Formation professionnelle</span></label>
     <label class="checkbox-option"><input type="checkbox" name="professionalSituation" value="Sans emploi"><span>Sans emploi</span></label>
+    <label class="checkbox-option">
+      <input type="checkbox" name="professionalSituation" value="Autre…">
+      <span>Autre (précisez)</span>
+    </label>
   </div>
   <input type="text" name="professionalSituationOther" class="form-input form-input-other" placeholder="Autre (précisez)...">
 </div>
@@ -444,6 +445,10 @@
   <div class="checkbox-group" data-require="true">
     <label class="checkbox-option"><input type="checkbox" name="funding" value="oui"><span>oui</span></label>
     <label class="checkbox-option"><input type="checkbox" name="funding" value="Non, mais j’ai une autre solution : promesse d’embauche ou autre (précisez)"><span>Non, mais j’ai une autre solution : promesse d’embauche ou autre (précisez)</span></label>
+    <label class="checkbox-option">
+      <input type="checkbox" name="funding" value="Autre…">
+      <span>Autre (précisez)</span>
+    </label>
   </div>
   <input type="text" name="fundingOther" class="form-input form-input-other" placeholder="Autre (précisez)...">
 </div>
@@ -454,6 +459,7 @@
   <div class="checkbox-group" data-require="true">
     <label class="checkbox-option"><input type="checkbox" name="languageEligibility" value="oui"><span>oui</span></label>
     <label class="checkbox-option"><input type="checkbox" name="languageEligibility" value="Non, mais je suivrai le pack d’études avec votre école de langue en ligne"><span>Non, mais je suivrai le pack d’études avec votre école de langue en ligne</span></label>
+    <!-- Pas besoin d'Autre ici si tu veux forcer un choix -->
   </div>
 </div>
 
@@ -463,6 +469,7 @@
   <div class="checkbox-group" data-require="true">
     <label class="checkbox-option"><input type="checkbox" name="documentPreparation" value="oui"><span>oui</span></label>
     <label class="checkbox-option"><input type="checkbox" name="documentPreparation" value="non"><span>non</span></label>
+    <!-- Ici non plus pas besoin d'Autre -->
   </div>
 </div>
 
