@@ -132,7 +132,8 @@ body {
 }
 
 .mobile-menu-btn {
-    display: flex;
+    display: none;
+    
     flex-direction: column;
     gap: 0.25rem;
     background: none;
@@ -140,12 +141,13 @@ body {
     cursor: pointer;
     padding: 0.5rem;
 }
-
-@media (min-width: 768px) {
-    .mobile-menu-btn {
-        display: none;
-    }
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
 }
+
+
 
 .hamburger {
     width: 1.5rem;

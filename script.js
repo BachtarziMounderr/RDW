@@ -125,3 +125,20 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => toast.remove(), 4000);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const navMobile = document.getElementById("navMobile");
+
+  mobileMenuBtn.addEventListener("click", () => {
+    mobileMenuBtn.classList.toggle("active"); // anime le hamburger
+    navMobile.classList.toggle("active"); // affiche / cache le menu
+  });
+});
+const navLinks = navMobile.querySelectorAll(".nav-link");
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenuBtn.classList.remove("active");
+    navMobile.classList.remove("active");
+  });
+});
