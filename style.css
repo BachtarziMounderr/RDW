@@ -734,7 +734,6 @@ body {
 .stats-description {
     color: #bfdbfe;
 }
-
 /* Form Section */
 .form-section {
     position: relative;
@@ -957,6 +956,43 @@ body {
     text-align: center;
     margin-top: 2rem;
 }
+
+/* ✅ Fix pour petits écrans */
+/* ✅ Uniform checkboxes for small screens */
+@media (max-width: 640px) {
+    .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .checkbox-option {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+        width: 100%;               /* make all equal width */
+        box-sizing: border-box;    /* include padding in width */
+    }
+
+    .checkbox-option input {
+        flex-shrink: 0;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .checkbox-option span {
+        flex: 1;                  /* text takes remaining space */
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+        color: #f9fafb;
+        word-wrap: break-word;
+    }
+}
+
 
 /* Footer */
 .footer {
