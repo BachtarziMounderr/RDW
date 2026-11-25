@@ -1,114 +1,261 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de Confidentialité - RDW Immigration</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Inclure la même navbar -->
-  <header class="header">
-    <div class="container">
-      <div class="header-content">
-        <div class="logo">
-          <img src="assets/logo.png" alt="RDW Logo" class="logo-img">
-        </div>
-        <nav class="nav-desktop">
-          <a href="index.html#home" class="nav-link">Accueil</a>
-          <a href="index.html#services" class="nav-link">Nos Services</a>
-          <a href="index.html#why-germany" class="nav-link">Pourquoi l'Allemagne</a>
-          <a href="index.html#footer" class="nav-link">À Propos</a>
-          <a href="index.html#footer" class="nav-link">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Politique de Confidentialité du site RDW Immigration."
+    />
+    <meta name="theme-color" content="#f8faff" />
+    <title>Politique de Confidentialité — RDW Immigration</title>
+    <link rel="icon" href="assets/logo.webp" type="image/webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="legal-page">
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 24 24">
+        <path d="M8 5h11v11M19 5 5 19" />
+      </symbol>
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+      <symbol id="icon-book" viewBox="0 0 24 24">
+        <path
+          d="M12 5v16M12 5C8 2 4 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-2-1-6-2-10 1Z"
+        />
+      </symbol>
+      <symbol id="icon-study" viewBox="0 0 24 24">
+        <path d="m2 9 10-5 10 5-10 5L2 9ZM6 11v6c4 3 8 3 12 0v-6m4-2v8" />
+      </symbol>
+      <symbol id="icon-work" viewBox="0 0 24 24">
+        <rect x="3" y="7" width="18" height="14" rx="3" />
+        <path
+          d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12c6 4 12 4 18 0m-9 1v3"
+        />
+      </symbol>
+      <symbol id="icon-heart" viewBox="0 0 24 24">
+        <path d="M20 5c-3-3-6-1-8 1-2-2-5-4-8-1-4 4 0 9 8 15 8-6 12-11 8-15Z" />
+      </symbol>
+      <symbol id="icon-language" viewBox="0 0 24 24">
+        <path
+          d="M3 5h12M9 2v3m3 0c-1 7-4 10-9 12m2-8c2 4 4 6 7 8m2 4 4-11 4 11m-7-3h6"
+        />
+      </symbol>
+      <symbol id="icon-document" viewBox="0 0 24 24">
+        <path
+          d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Zm0 0v6h6M8 13h8m-8 4h5"
+        />
+      </symbol>
+      <symbol id="icon-compass" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="m16 8-2 6-6 2 2-6 6-2Z" />
+      </symbol>
+      <symbol id="icon-plane" viewBox="0 0 24 24">
+        <path d="m22 2-6 20-4-9-10-4 20-7Zm0 0L12 13" />
+      </symbol>
+      <symbol id="icon-telegram" viewBox="0 0 24 24">
+        <path
+          d="M21.5 3.5 18.2 20c-.2 1.2-.9 1.5-1.9.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L5.5 13.4.6 11.9c-1.1-.3-1.1-1.1.2-1.6L20 2.9c.9-.3 1.7.2 1.5.6Z"
+          stroke="none"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="5" y="10" width="14" height="11" rx="3" />
+        <path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2" />
+      </symbol>
+    </svg>
+    <div class="reading-progress" aria-hidden="true"></div>
+    <div id="pageTop" aria-hidden="true"></div>
+    <header class="header">
+      <div class="container header-inner">
+        <a href="index.html#home" class="brand" aria-label="RDW, accueil"
+          ><img src="assets/logo.webp" width="80" height="80" alt="RDW" /><span
+            >Votre avenir, accompagné.</span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="Navigation principale">
+          <a href="index.html#projets">Votre projet</a
+          ><a href="index.html#accompagnement">L’accompagnement</a
+          ><a href="index.html#ressources">Nos ressources</a>
         </nav>
-        <div class="header-cta">
-          <a href="index.html#form" class="btn btn-primary">Commencer</a>
-        </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Ouvrir le menu" aria-controls="navMobile" aria-expanded="false">
-          <span class="hamburger"></span>
-          <span class="hamburger"></span>
-          <span class="hamburger"></span>
+        <a class="button button-primary header-cta" href="index.html#form"
+          >Parlons de votre projet
+          <svg aria-hidden="true"><use href="#icon-arrow" /></svg
+        ></a>
+        <button
+          class="mobile-menu-btn"
+          id="mobileMenuBtn"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-controls="navMobile"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
         </button>
       </div>
-      <div class="nav-mobile" id="navMobile">
-        <a href="index.html#home" class="nav-link">Accueil</a>
-        <a href="index.html#services" class="nav-link">Nos Services</a>
-        <a href="index.html#why-germany" class="nav-link">Pourquoi l'Allemagne</a>
-        <a href="index.html#footer" class="nav-link">À Propos</a>
-        <a href="index.html#footer" class="nav-link">Contact</a>
-        <a href="index.html#form" class="btn btn-primary">Commencer</a>
+      <nav
+        class="mobile-nav"
+        id="navMobile"
+        aria-label="Navigation mobile"
+        hidden
+      >
+        <a href="index.html#projets">Votre projet</a
+        ><a href="index.html#accompagnement">L’accompagnement</a
+        ><a href="index.html#ressources">Le guide & Telegram</a
+        ><a href="index.html#faq">Vos questions</a
+        ><a class="button button-primary" href="index.html#form"
+          >Ma consultation gratuite
+          <svg aria-hidden="true"><use href="#icon-arrow" /></svg
+        ></a>
+      </nav>
+    </header>
+
+    <main id="main" class="legal-main">
+      <div class="container">
+        <a class="legal-back" href="index.html"
+          ><svg aria-hidden="true"><use href="#icon-arrow" /></svg> Retour à
+          l’accueil</a
+        >
+        <h1>Politique de Confidentialité</h1>
+        <p class="legal-lead">
+          La protection de vos données personnelles est une priorité pour RDW
+          Immigration. Cette page explique quelles informations nous collectons,
+          pourquoi et comment nous les utilisons.
+        </p>
+        <article class="legal-content">
+          <h2>1. Informations collectées</h2>
+          <p>
+            Lorsque vous remplissez notre formulaire, nous collectons uniquement
+            :
+          </p>
+          <ul>
+            <li>Votre nom et prénom</li>
+            <li>Votre âge et votre ville de résidence</li>
+            <li>Votre adresse e-mail et votre numéro de téléphone</li>
+            <li>
+              Vos informations liées à votre objectif d’immigration en Allemagne
+              (situation professionnelle, financement, etc.)
+            </li>
+          </ul>
+
+          <h2>2. Utilisation des données</h2>
+          <p>Ces données sont utilisées exclusivement pour :</p>
+          <ul>
+            <li>Analyser votre projet d’immigration</li>
+            <li>Vous contacter afin de vous conseiller et vous accompagner</li>
+            <li>Adapter nos services à votre profil</li>
+          </ul>
+
+          <h2>3. Partage des données</h2>
+          <p>
+            Les réponses au formulaire sont transmises via Google Forms et
+            Google Sheets afin de permettre à notre équipe d’étudier votre
+            demande et de vous recontacter.
+          </p>
+
+          <h2>4. Conservation des données</h2>
+          <p>
+            Vos informations sont conservées uniquement le temps nécessaire à
+            l’étude et au suivi de votre projet. Vous pouvez demander leur
+            suppression à tout moment.
+          </p>
+
+          <h2>5. Vos droits</h2>
+          <p>Vous pouvez à tout moment demander :</p>
+          <ul>
+            <li>La consultation des données que nous détenons sur vous</li>
+            <li>La modification ou mise à jour de vos informations</li>
+            <li>La suppression définitive de vos données personnelles</li>
+          </ul>
+
+          <h2>6. Contact</h2>
+          <p>
+            Pour toute question relative à vos données personnelles, vous pouvez
+            nous contacter à :
+            <strong>rdw.immigration@gmail.com</strong> ou par téléphone au
+            <strong>0556006522</strong>.
+          </p>
+        </article>
       </div>
-    </div>
-  </header>
-
-  <!-- Section Politique -->
-<section class="form-section">
-  <div class="form-background">
-    <div class="form-overlay"></div>
-  </div>
-  <div class="container">
-    <div class="form-header">
-      <h1 class="form-title">Politique de Confidentialité</h1>
-      <p class="form-description">
-        La protection de vos données personnelles est une priorité pour RDW Immigration. 
-        Cette page explique quelles informations nous collectons, pourquoi et comment nous les utilisons.
-      </p>
-    </div>
-    <div class="form-container">
-      <h2>1. Informations collectées</h2>
-      <p>
-        Lorsque vous remplissez notre formulaire, nous collectons uniquement :
-      </p>
-      <ul>
-        <li>Votre nom et prénom</li>
-        <li>Votre numéro de téléphone</li>
-        <li>Vos informations liées à votre objectif d’immigration en Allemagne (situation professionnelle, financement, etc.)</li>
-      </ul>
-
-      <h2>2. Utilisation des données</h2>
-      <p>Ces données sont utilisées exclusivement pour :</p>
-      <ul>
-        <li>Analyser votre projet d’immigration</li>
-        <li>Vous contacter afin de vous conseiller et vous accompagner</li>
-        <li>Adapter nos services à votre profil</li>
-      </ul>
-
-      <h2>3. Partage des données</h2>
-      <p>
-        Nous <strong>ne partageons jamais</strong> vos informations personnelles avec des tiers 
-        sans votre consentement explicite. Vos données restent confidentielles et utilisées uniquement par notre équipe.
-      </p>
-
-      <h2>4. Conservation des données</h2>
-      <p>
-        Vos informations sont conservées uniquement le temps nécessaire à l’étude et au suivi de votre projet. 
-        Vous pouvez demander leur suppression à tout moment.
-      </p>
-
-      <h2>5. Vos droits</h2>
-      <p>
-        Vous pouvez à tout moment demander :
-      </p>
-      <ul>
-        <li>La consultation des données que nous détenons sur vous</li>
-        <li>La modification ou mise à jour de vos informations</li>
-        <li>La suppression définitive de vos données personnelles</li>
-      </ul>
-
-      <h2>6. Contact</h2>
-      <p>
-        Pour toute question relative à vos données personnelles, vous pouvez nous contacter à :  
-        <strong>rdw.immigration@gmail.com</strong> ou par téléphone au <strong>0556006522</strong>.
-      </p>
-    </div>
-  </div>
-</section>
-
-  <!-- Footer identique -->
-  <footer id="footer" class="footer">
-    <!-- copie du footer de index.html -->
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a
+              class="brand"
+              href="index.html#home"
+              aria-label="RDW, retour à l’accueil"
+              ><img
+                src="assets/logo.webp"
+                width="80"
+                height="80"
+                loading="lazy"
+                alt="RDW"
+            /></a>
+            <p>
+              De l’ambition au départ.<br />Votre prochain chapitre s’écrit
+              ensemble.
+            </p>
+            <span class="german-stripe" aria-hidden="true"></span>
+          </div>
+          <div>
+            <h2>Votre parcours</h2>
+            <a href="index.html#projets">Étudier, travailler, se retrouver</a
+            ><a href="index.html#accompagnement">Notre accompagnement</a
+            ><a href="index.html#form">Ma consultation gratuite</a>
+          </div>
+          <div>
+            <h2>Vos ressources</h2>
+            <a
+              href="Ta-route-vers-l-Allemagne-RDW%20%2811%29.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Le guide RDW
+              <span class="sr-only"> (PDF, nouvel onglet)</span>↗</a
+            ><a
+              href="https://t.me/RDW_assistant_bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              >L’assistant Telegram
+              <span class="sr-only"> (nouvel onglet)</span>↗</a
+            ><a href="index.html#faq">Questions fréquentes</a>
+          </div>
+          <div>
+            <h2>Gardons le contact</h2>
+            <a href="mailto:rdw.immigration@gmail.com"
+              >rdw.immigration@gmail.com</a
+            ><a href="tel:+213556006522">0556 00 65 22</a>
+            <p>Constantine, Algérie</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span data-year>2026</span> RDW Immigration. Tous droits réservés.
+          </p>
+          <nav aria-label="Informations légales">
+            <a href="confidentialite.html">Confidentialité</a
+            ><a href="conditions.html">Conditions de service</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
