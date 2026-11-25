@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("userForm");
   const successMessage = document.getElementById("successMessage");
 
+  if (!form) return;
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -130,15 +132,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const navMobile = document.getElementById("navMobile");
 
+  if (!mobileMenuBtn || !navMobile) return;
+
+  function setMenuOpen(isOpen) {
+    mobileMenuBtn.classList.toggle("active", isOpen);
+    navMobile.classList.toggle("active", isOpen);
+    mobileMenuBtn.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuBtn.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+  }
+
   mobileMenuBtn.addEventListener("click", () => {
-    mobileMenuBtn.classList.toggle("active"); // anime le hamburger
-    navMobile.classList.toggle("active"); // affiche / cache le menu
+    setMenuOpen(mobileMenuBtn.getAttribute("aria-expanded") !== "true");
   });
-});
-const navLinks = navMobile.querySelectorAll(".nav-link");
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    mobileMenuBtn.classList.remove("active");
-    navMobile.classList.remove("active");
+
+  navMobile.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && mobileMenuBtn.getAttribute("aria-expanded") === "true") {
+      setMenuOpen(false);
+      mobileMenuBtn.focus();
+    }
   });
 });
