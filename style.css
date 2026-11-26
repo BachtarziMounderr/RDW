@@ -2482,6 +2482,8 @@ input::placeholder {
   .support-card h3 {
     font-size: 19px;
     margin-bottom: 10px;
+    letter-spacing: 0;
+    line-height: 1.4;
   }
   .service-tag {
     margin-top: 15px;
