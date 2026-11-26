@@ -21,11 +21,11 @@ Ouvrir http://127.0.0.1:8765/ ou utiliser Live Server sur `index.html`.
 
 ## Formulaire
 
-Le parcours comporte trois étapes : projet, préparation et coordonnées. Les identifiants `entry.*`, les valeurs des réponses et l’URL du formulaire Google d’origine sont conservés. Les choix sont désormais uniques pour éviter les réponses contradictoires.
+Le parcours comporte trois étapes : coordonnées, situation et projet. Les types des champs, les questions, les libellés des réponses, leur ordre et leurs valeurs reprennent le formulaire du commit `91f06b6`. Les six groupes utilisent des cases à cocher et acceptent plusieurs réponses. Les identifiants `entry.*` et l’URL du formulaire Google d’origine sont conservés. Chaque réponse cochée est envoyée séparément sous le même identifiant Google, y compris lorsqu’un choix classique et « Autre » sont sélectionnés ensemble.
 
 L’envoi conserve l’intégration directe à Google Forms, connecté à la feuille Google Sheets existante. La requête utilise `no-cors` : le navigateur ne peut pas lire la réponse de Google ni certifier l’enregistrement dans la feuille. Le message final indique une transmission, pas une confirmation d’enregistrement. Une confirmation fiable nécessiterait un endpoint serveur ou Google Apps Script configuré avec les accès appropriés.
 
-La validation s’effectue à chaque étape. Les champs « autre » sont activés uniquement si nécessaires. Les réponses restent saisies si le réseau échoue et le bouton d’envoi empêche les doubles clics. Les données personnelles ne sont pas journalisées dans la console ni enregistrées dans le stockage du navigateur.
+La validation s’effectue à chaque étape avec les contraintes du formulaire précédent : les cinq coordonnées sont obligatoires, sans obligation ajoutée aux cases à cocher. Les champs « autre » deviennent obligatoires quand leur option est cochée, comme auparavant. Les réponses restent saisies si le réseau échoue et le bouton d’envoi empêche les doubles clics. Les données personnelles ne sont pas journalisées dans la console ni enregistrées dans le stockage du navigateur.
 
 Les tests automatisés interceptent les requêtes du formulaire : aucune demande de test n’est transmise à Google.
 

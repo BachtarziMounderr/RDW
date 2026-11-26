@@ -800,22 +800,22 @@
                 }
               </style></noscript
             >
-            <form id="userForm" novalidate>
-              <div class="form-progress" aria-label="Étapes de votre demande">
+            <form id="userForm" novalidate="">
+              <div aria-label="Étapes de votre demande" class="form-progress">
                 <ol>
                   <li>
-                    <button type="button" data-go-step="0" aria-current="step">
-                      <span>1</span> Votre projet
+                    <button aria-current="step" data-go-step="0" type="button">
+                      <span>1</span> Coordonnées
                     </button>
                   </li>
                   <li>
-                    <button type="button" data-go-step="1" disabled>
-                      <span>2</span> Préparation
+                    <button data-go-step="1" disabled="" type="button">
+                      <span>2</span> Votre situation
                     </button>
                   </li>
                   <li>
-                    <button type="button" data-go-step="2" disabled>
-                      <span>3</span> Coordonnées
+                    <button data-go-step="2" disabled="" type="button">
+                      <span>3</span> Votre projet
                     </button>
                   </li>
                 </ol>
@@ -826,257 +826,6 @@
               <div class="form-step" data-step="0">
                 <div class="step-heading">
                   <p class="step-counter">Étape 1 sur 3</p>
-                  <h3 tabindex="-1">Parlez-nous de votre projet.</h3>
-                  <p>Chaque parcours est différent. Commençons par le vôtre.</p>
-                </div>
-                <fieldset class="question">
-                  <legend>Votre projet en Allemagne</legend>
-                  <div class="choices">
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="mainObjective"
-                        value="Étudier en Allemagne"
-                        required
-                      /><span>Étudier</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="mainObjective"
-                        value="Travailler en Allemagne"
-                        required
-                      /><span>Travailler</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="mainObjective"
-                        value="Rejoindre un membre de la famille"
-                        required
-                      /><span>Rejoindre ma famille</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="mainObjective"
-                        value="Autre…"
-                        required
-                      /><span>Un autre projet</span></label
-                    >
-                  </div>
-                  <div class="other-field" hidden>
-                    <label for="mainObjectiveOther"
-                      >Précisez votre réponse</label
-                    ><input
-                      id="mainObjectiveOther"
-                      name="mainObjectiveOther"
-                      type="text"
-                      maxlength="500"
-                      disabled
-                      placeholder="Quelques mots suffisent…"
-                    />
-                  </div>
-                </fieldset>
-                <fieldset class="question">
-                  <legend>Vous avez une destination en tête ?</legend>
-                  <div class="choices">
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="destination"
-                        value="Je suis flexible et prêt(e) à m’installer dans le Land offrant les meilleures opportunités et garanties de réussite"
-                        required
-                      /><span>Je suis flexible</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="destination"
-                        value="Autre…"
-                        required
-                      /><span>J’ai une ville ou un Land en tête</span></label
-                    >
-                  </div>
-                  <div class="other-field" hidden>
-                    <label for="destinationOther">Précisez votre réponse</label
-                    ><input
-                      id="destinationOther"
-                      name="destinationOther"
-                      type="text"
-                      maxlength="500"
-                      disabled
-                      placeholder="Quelques mots suffisent…"
-                    />
-                  </div>
-                </fieldset>
-                <fieldset class="question">
-                  <legend>Votre situation actuelle</legend>
-                  <div class="choices">
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="professionalSituation"
-                        value="Salarié(e) Domaine"
-                        required
-                      /><span>Salarié(e)</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="professionalSituation"
-                        value="Étudiant(e) Spécialité"
-                        required
-                      /><span>Étudiant(e)</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="professionalSituation"
-                        value="Indépendant(e) Domaine d’activité"
-                        required
-                      /><span>Indépendant(e)</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="professionalSituation"
-                        value="Formation professionnelle"
-                        required
-                      /><span>En formation</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="professionalSituation"
-                        value="Sans emploi"
-                        required
-                      /><span>Sans emploi</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="professionalSituation"
-                        value="Autre…"
-                        required
-                      /><span>Autre situation</span></label
-                    >
-                  </div>
-                  <div class="other-field" hidden>
-                    <label for="professionalSituationOther"
-                      >Précisez votre réponse</label
-                    ><input
-                      id="professionalSituationOther"
-                      name="professionalSituationOther"
-                      type="text"
-                      maxlength="500"
-                      disabled
-                      placeholder="Quelques mots suffisent…"
-                    />
-                  </div>
-                </fieldset>
-              </div>
-              <div class="form-step" data-step="1" hidden>
-                <div class="step-heading">
-                  <p class="step-counter">Étape 2 sur 3</p>
-                  <h3 tabindex="-1">Où en êtes-vous aujourd’hui ?</h3>
-                  <p>
-                    Pas besoin d’avoir tout préparé pour faire le premier pas.
-                  </p>
-                </div>
-                <fieldset class="question">
-                  <legend>Avez-vous déjà un niveau B2 en allemand ?</legend>
-                  <div class="choices">
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="languageEligibility"
-                        value="oui"
-                        required
-                      /><span>Oui, j’ai déjà le niveau B2</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="languageEligibility"
-                        value="Non, mais je suivrai le pack d’études avec votre école de langue en ligne"
-                        required
-                      /><span>Pas encore, je souhaite me former</span></label
-                    >
-                  </div>
-                </fieldset>
-                <fieldset class="question">
-                  <legend>
-                    Comment envisagez-vous de financer votre projet ?
-                  </legend>
-                  <div class="choices">
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="funding"
-                        value="oui"
-                        required
-                      /><span>Épargne personnelle / compte bloqué</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="funding"
-                        value="Non, mais j’ai une autre solution : promesse d’embauche ou autre (précisez)"
-                        required
-                      /><span
-                        >Promesse d’embauche ou autre solution</span
-                      ></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="funding"
-                        value="Autre…"
-                        required
-                      /><span>J’aimerais en discuter</span></label
-                    >
-                  </div>
-                  <div class="other-field" hidden>
-                    <label for="fundingOther">Précisez votre réponse</label
-                    ><input
-                      id="fundingOther"
-                      name="fundingOther"
-                      type="text"
-                      maxlength="500"
-                      disabled
-                      placeholder="Quelques mots suffisent…"
-                    />
-                  </div>
-                </fieldset>
-                <fieldset class="question">
-                  <legend>
-                    Êtes-vous prêt(e) à préparer les documents de votre dossier
-                    ?
-                  </legend>
-                  <div class="choices">
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="documentPreparation"
-                        value="oui"
-                        required
-                      /><span>Oui, je suis prêt(e)</span></label
-                    >
-                    <label class="choice"
-                      ><input
-                        type="radio"
-                        name="documentPreparation"
-                        value="non"
-                        required
-                      /><span>J’ai besoin d’être accompagné(e)</span></label
-                    >
-                  </div>
-                </fieldset>
-              </div>
-              <div class="form-step" data-step="2" hidden>
-                <div class="step-heading">
-                  <p class="step-counter">Étape 3 sur 3</p>
                   <h3 tabindex="-1">Faisons connaissance.</h3>
                   <p>
                     Laissez vos coordonnées pour échanger avec notre équipe.
@@ -1084,69 +833,61 @@
                 </div>
                 <div class="input-grid">
                   <div class="input-field full">
-                    <label for="fullName"
-                      >Nom et prénom <span aria-hidden="true">*</span></label
+                    <label for="fullName">Nom et Prénom *</label
                     ><input
+                      autocomplete="name"
                       id="fullName"
                       name="fullName"
-                      autocomplete="name"
-                      maxlength="120"
-                      placeholder="Votre nom complet"
-                      required
+                      placeholder="Entrez votre nom et prénom"
+                      required=""
+                      type="text"
                     />
                   </div>
                   <div class="input-field">
-                    <label for="age"
-                      >Âge <span aria-hidden="true">*</span></label
+                    <label for="age">Âge *</label
                     ><input
                       id="age"
-                      name="age"
-                      type="number"
                       inputmode="numeric"
-                      min="16"
                       max="100"
-                      placeholder="Votre âge"
-                      required
+                      min="16"
+                      name="age"
+                      placeholder="Entrez votre âge"
+                      required=""
+                      type="number"
                     />
                   </div>
                   <div class="input-field">
-                    <label for="city"
-                      >Ville de résidence
-                      <span aria-hidden="true">*</span></label
+                    <label for="city">Ville de Résidence *</label
                     ><input
+                      autocomplete="address-level2"
                       id="city"
                       name="city"
-                      autocomplete="address-level2"
-                      maxlength="120"
-                      placeholder="Ex. Constantine"
-                      required
+                      placeholder="Entrez votre ville de résidence"
+                      required=""
+                      type="text"
                     />
                   </div>
                   <div class="input-field full">
-                    <label for="email"
-                      >Adresse e-mail <span aria-hidden="true">*</span></label
+                    <label for="email">Adresse Email *</label
                     ><input
+                      autocomplete="email"
                       id="email"
                       name="email"
-                      type="email"
-                      autocomplete="email"
+                      placeholder="Entrez votre email"
+                      required=""
                       spellcheck="false"
-                      maxlength="254"
-                      placeholder="vous@exemple.com"
-                      required
+                      type="email"
                     />
                   </div>
                   <div class="input-field full">
-                    <label for="phone"
-                      >Téléphone <span aria-hidden="true">*</span></label
+                    <label for="phone">Numéro de Téléphone *</label
                     ><input
+                      autocomplete="tel"
                       id="phone"
                       name="phone"
+                      placeholder="Entrez votre numéro de téléphone"
+                      required=""
                       type="tel"
-                      autocomplete="tel"
-                      maxlength="40"
-                      placeholder="Ex. +213 5 00 00 00 00"
-                      required
                     />
                   </div>
                 </div>
@@ -1157,33 +898,261 @@
                   >.
                 </p>
               </div>
-              <p class="form-error" id="formError" role="alert" hidden></p>
+              <div class="form-step" data-step="1" hidden="">
+                <div class="step-heading">
+                  <p class="step-counter">Étape 2 sur 3</p>
+                  <h3 tabindex="-1">Parlez-nous de votre situation.</h3>
+                  <p>Plusieurs réponses sont possibles.</p>
+                </div>
+                <fieldset class="question" data-field="destination">
+                  <legend>Quelle est votre Destination en Allemagne</legend>
+                  <div class="choices" data-require="true">
+                    <label class="choice"
+                      ><input
+                        name="destination"
+                        type="checkbox"
+                        value="Je suis flexible et prêt(e) à m’installer dans le Land offrant les meilleures opportunités et garanties de réussite"
+                      /><span
+                        >Je suis flexible et prêt(e) à m’installer dans le Land
+                        offrant les meilleures opportunités et garanties de
+                        réussite</span
+                      ></label
+                    ><label class="choice"
+                      ><input
+                        name="destination"
+                        type="checkbox"
+                        value="Autre…"
+                      /><span>Un Land précis (précisez lequel)</span></label
+                    >
+                  </div>
+                  <div class="other-field" hidden="">
+                    <label for="destinationOther">Autre (précisez)</label
+                    ><input
+                      disabled=""
+                      id="destinationOther"
+                      name="destinationOther"
+                      placeholder="Autre (précisez)..."
+                      type="text"
+                    />
+                  </div>
+                </fieldset>
+                <fieldset class="question" data-field="professionalSituation">
+                  <legend>
+                    Quelle est votre Situation professionnelle actuelle
+                  </legend>
+                  <div class="choices" data-require="true">
+                    <label class="choice"
+                      ><input
+                        name="professionalSituation"
+                        type="checkbox"
+                        value="Salarié(e) Domaine"
+                      /><span>Salarié(e) Domaine</span></label
+                    ><label class="choice"
+                      ><input
+                        name="professionalSituation"
+                        type="checkbox"
+                        value="Étudiant(e) Spécialité"
+                      /><span>Étudiant(e) Spécialité</span></label
+                    ><label class="choice"
+                      ><input
+                        name="professionalSituation"
+                        type="checkbox"
+                        value="Indépendant(e) Domaine d’activité"
+                      /><span>Indépendant(e) Domaine d’activité</span></label
+                    ><label class="choice"
+                      ><input
+                        name="professionalSituation"
+                        type="checkbox"
+                        value="Formation professionnelle"
+                      /><span>Formation professionnelle</span></label
+                    ><label class="choice"
+                      ><input
+                        name="professionalSituation"
+                        type="checkbox"
+                        value="Sans emploi"
+                      /><span>Sans emploi</span></label
+                    ><label class="choice"
+                      ><input
+                        name="professionalSituation"
+                        type="checkbox"
+                        value="Autre…"
+                      /><span>Autre (précisez)</span></label
+                    >
+                  </div>
+                  <div class="other-field" hidden="">
+                    <label for="professionalSituationOther"
+                      >Autre (précisez)</label
+                    ><input
+                      disabled=""
+                      id="professionalSituationOther"
+                      name="professionalSituationOther"
+                      placeholder="Autre (précisez)..."
+                      type="text"
+                    />
+                  </div>
+                </fieldset>
+                <fieldset class="question" data-field="funding">
+                  <legend>
+                    Est-ce que vous comptez utiliser un compte bloqué de 12 500
+                    € pour votre dossier d’immigration ?
+                  </legend>
+                  <div class="choices" data-require="true">
+                    <label class="choice"
+                      ><input name="funding" type="checkbox" value="oui" /><span
+                        >oui</span
+                      ></label
+                    ><label class="choice"
+                      ><input
+                        name="funding"
+                        type="checkbox"
+                        value="Non, mais j’ai une autre solution : promesse d’embauche ou autre (précisez)"
+                      /><span
+                        >Non, mais j’ai une autre solution : promesse d’embauche
+                        ou autre (précisez)</span
+                      ></label
+                    ><label class="choice"
+                      ><input
+                        name="funding"
+                        type="checkbox"
+                        value="Autre…"
+                      /><span>Autre (précisez)</span></label
+                    >
+                  </div>
+                  <div class="other-field" hidden="">
+                    <label for="fundingOther">Autre (précisez)</label
+                    ><input
+                      disabled=""
+                      id="fundingOther"
+                      name="fundingOther"
+                      placeholder="Autre (précisez)..."
+                      type="text"
+                    />
+                  </div>
+                </fieldset>
+              </div>
+              <div class="form-step" data-step="2" hidden="">
+                <div class="step-heading">
+                  <p class="step-counter">Étape 3 sur 3</p>
+                  <h3 tabindex="-1">Précisons votre projet.</h3>
+                  <p>
+                    Sélectionnez les réponses qui correspondent à votre
+                    situation.
+                  </p>
+                </div>
+                <fieldset class="question" data-field="languageEligibility">
+                  <legend>Avez-vous déjà un niveau B2 en allemand ?</legend>
+                  <div class="choices" data-require="true">
+                    <label class="choice"
+                      ><input
+                        name="languageEligibility"
+                        type="checkbox"
+                        value="oui"
+                      /><span>oui</span></label
+                    ><label class="choice"
+                      ><input
+                        name="languageEligibility"
+                        type="checkbox"
+                        value="Non, mais je suivrai le pack d’études avec votre école de langue en ligne"
+                      /><span
+                        >Non, mais je suivrai le pack d’études avec votre école
+                        de langue en ligne</span
+                      ></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset class="question" data-field="documentPreparation">
+                  <legend>
+                    Êtes-vous prêt(e) à rassembler tous les documents
+                    nécessaires (qui peuvent varier selon la procédure de visa)
+                    ?
+                  </legend>
+                  <div class="choices" data-require="true">
+                    <label class="choice"
+                      ><input
+                        name="documentPreparation"
+                        type="checkbox"
+                        value="oui"
+                      /><span>oui</span></label
+                    ><label class="choice"
+                      ><input
+                        name="documentPreparation"
+                        type="checkbox"
+                        value="non"
+                      /><span>non</span></label
+                    >
+                  </div>
+                </fieldset>
+                <fieldset class="question" data-field="mainObjective">
+                  <legend>
+                    Quel est l' Objectif principal de votre immigration
+                  </legend>
+                  <div class="choices" data-require="true">
+                    <label class="choice"
+                      ><input
+                        name="mainObjective"
+                        type="checkbox"
+                        value="Étudier en Allemagne"
+                      /><span>Étudier en Allemagne</span></label
+                    ><label class="choice"
+                      ><input
+                        name="mainObjective"
+                        type="checkbox"
+                        value="Rejoindre un membre de la famille"
+                      /><span>Rejoindre un membre de la famille</span></label
+                    ><label class="choice"
+                      ><input
+                        name="mainObjective"
+                        type="checkbox"
+                        value="Travailler en Allemagne"
+                      /><span>Travailler en Allemagne</span></label
+                    ><label class="choice"
+                      ><input
+                        name="mainObjective"
+                        type="checkbox"
+                        value="Autre…"
+                      /><span>Autre (précisez)</span></label
+                    >
+                  </div>
+                  <div class="other-field" hidden="">
+                    <label for="mainObjectiveOther">Autre (précisez)</label
+                    ><input
+                      disabled=""
+                      id="mainObjectiveOther"
+                      name="mainObjectiveOther"
+                      placeholder="Autre (précisez)..."
+                      type="text"
+                    />
+                  </div>
+                </fieldset>
+              </div>
+              <p class="form-error" hidden="" id="formError" role="alert"></p>
               <div class="form-actions">
                 <button
-                  type="button"
                   class="button button-back"
+                  hidden=""
                   id="prevStep"
-                  hidden
+                  type="button"
                 >
                   Retour</button
-                ><span class="required-note">Tous les champs sont requis.</span
+                ><span class="required-note"
+                  >Les champs marqués * sont requis.</span
                 ><button
-                  type="button"
                   class="button button-primary"
                   id="nextStep"
+                  type="button"
                 >
                   Continuer
                   <svg aria-hidden="true">
-                    <use href="#icon-arrow" />
+                    <use href="#icon-arrow"></use>
                   </svg></button
                 ><button
-                  type="submit"
                   class="button button-primary"
+                  hidden=""
                   id="submitBtn"
-                  hidden
+                  type="submit"
                 >
                   <span>Demander ma consultation</span
-                  ><svg aria-hidden="true"><use href="#icon-arrow" /></svg>
+                  ><svg aria-hidden="true"><use href="#icon-arrow"></use></svg>
                 </button>
               </div>
             </form>

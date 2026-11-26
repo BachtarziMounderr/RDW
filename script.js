@@ -261,7 +261,7 @@
     if (!invalid) return true;
     if (currentStep !== index) showStep(index, false);
     errorMessage.textContent = invalid.validity.valueMissing
-      ? "Complétez cette étape pour continuer. Choisissez une réponse à chaque question."
+      ? "Complétez les champs obligatoires de cette étape pour continuer."
       : invalid.validationMessage;
     errorMessage.hidden = false;
     invalid.reportValidity();
@@ -270,12 +270,14 @@
   const updateOtherInput = (question) => {
     const wrapper = question.querySelector(".other-field");
     if (!wrapper) return;
-    const selected = question.querySelector('input[type="radio"]:checked');
-    const other = selected?.value === "Autre…";
+    const other =
+      question.querySelector('input[type="checkbox"][value="Autre…"]')
+        ?.checked === true;
     const input = wrapper.querySelector("input");
     wrapper.hidden = !other;
     input.disabled = !other;
     input.required = other;
+    if (!other) input.value = "";
   };
   form.querySelectorAll(".question").forEach((question) => {
     question.addEventListener("change", () => updateOtherInput(question));
@@ -334,17 +336,27 @@
     const values = new FormData(form);
     const payload = new FormData();
     Object.entries(simpleFields).forEach(([name, entry]) =>
-      payload.append(entry, String(values.get(name) || "").trim()),
+      payload.append(entry, String(values.get(name) || "")),
     );
     Object.entries(questionFields).forEach(([name, entry]) => {
-      const answer = values.get(name);
-      if (answer === "Autre…") {
+      const answers = values.getAll(name);
+      const otherResponse = String(
+        form.elements.namedItem(name + "Other")?.value || "",
+      ).trim();
+      answers.forEach((answer) => {
+        if (answer.includes("Autre")) {
+          payload.append(entry, "__other_option__");
+          if (otherResponse) {
+            payload.append(entry + ".other_option_response", otherResponse);
+          }
+        } else {
+          payload.append(entry, answer);
+        }
+      });
+      if (answers.length === 0 && otherResponse) {
         payload.append(entry, "__other_option__");
-        payload.append(
-          entry + ".other_option_response",
-          String(values.get(name + "Other") || "").trim(),
-        );
-      } else if (answer) payload.append(entry, answer);
+        payload.append(entry + ".other_option_response", otherResponse);
+      }
     });
     sending = true;
     submitButton.disabled = true;
